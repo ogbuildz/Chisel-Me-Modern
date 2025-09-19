@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "chisel_me_modern",
+  "version": "${version}",
+  "name": "chiselMeModern",
+  "description": "A mod to make yourself and",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/chisel_me_modern/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "org.ogbuildz.client.chiselmemodernDataGenerator"
+    ],
+    "client": [
+      "org.ogbuildz.client.chiselmemodernClient"
+    ],
+    "main": [
+      "org.ogbuildz.chiselmemodern"
+    ]
+  },
+  "mixins": [
+    "chisel_me_modern.mixins.json",
+    {
+      "config": "chisel_me_modern.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
